@@ -12,13 +12,23 @@ require "capistrano/deploy"
 # require "capistrano/scm/svn"
 # install_plugin Capistrano::SCM::Svn
 # or
+
+require 'capistrano/setup'
+require 'capistrano/deploy'
 require "capistrano/scm/git"
-require "capistrano/rails"
-require "capistrano/bundler"
-require "capistrano/rvm"
+
+require 'capistrano/rails'
+# require 'capistrano/rails/assets'
+# require 'capistrano/faster_assets'
+require 'capistrano/rails/migrations'
+require 'capistrano/bundler'
+require 'capistrano/rvm'
 require 'capistrano/puma'
+
 install_plugin Capistrano::Puma
-install_plugin Capistrano::Puma::Systemd
+install_plugin Capistrano::Puma::Daemon 
+
+
 install_plugin Capistrano::SCM::Git
 
 # Include tasks from other gems included in your Gemfile

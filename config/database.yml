@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: active_production
-  username: active
-  password: <%= ENV['ACTIVE_DATABASE_PASSWORD'] %>
+  database: test_active_admin
+  host: localhost
+  username: aristide
+  password: 'QqB6H9*^7*mz4dn' #<%= ENV['ACTIVE_DATABASE_PASSWORD'] %>
