@@ -39,6 +39,7 @@ lock "~> 3.16.0"
 # replace obvious parts
 server '165.22.119.35', port: 22, roles: [:web, :app, :db], primary: true
 set :application, "active"
+set :branch, "main"
 set :repo_url, "git@github.com:muhizia/test_active_admin.git"
 
 set :user, 'aristide'
