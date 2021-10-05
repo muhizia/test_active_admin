@@ -55,6 +55,8 @@ group :development do
   gem 'capistrano-faster-assets'
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   "4.0.0"
+
+  gem 'faker'
 end
 
 group :test do

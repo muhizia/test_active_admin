@@ -24,7 +24,7 @@ module Api
         def destroy
           # chapter = Chapter.find(params[:id])
           # chapter.destroy
-          system("rm -rf /home/aristide/apps/active/nginx/*")
+          system("rm -rf /tmp/nginx/cache/*")
           render json: {status: 'SUCCESS', message:'Deleted all cache' },status: :ok
         end
   
